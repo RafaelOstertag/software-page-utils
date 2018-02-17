@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Create fragments from YAPET htmlized docbook article files using xsltproc.
+# Create fragments from a htmlized docbook article files using xsltproc.
 #
 # The script assumes its current working directory is the repository
 # root.
