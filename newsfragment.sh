@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Create a fragment from the YAPET NEWS file using pandoc.
+# Create a fragment from a software NEWS file using pandoc.
 #
 # The script assumes its current working directory is the repository
 # root, and `work/tmp` already exists
@@ -8,14 +8,15 @@
 set -e
 set -u
 
-if [ $# -ne 2 ]
+if [ $# -ne 3 ]
 then
-    echo "`basename $0` <NEWSFILE> <OUTPUTDIRECTORY>" >&2
+    echo "`basename $0` <PAGETITLE> <NEWSFILE> <OUTPUTDIRECTORY>" >&2
     exit 1
 fi
 
-news_file=$1
-output_dir=$2
+page_title=$1
+news_file=$2
+output_dir=$3
 
 # The fragment below provides the section header, so we don't need the
 # first line of the HTMLized NEWS file, which also happens to be a
@@ -25,7 +26,7 @@ cat > "${output_dir}/news.xml" <<EOF
 <?xml version="1.0" encoding="utf-8"?>
 <fragment>
   <title>
-    YAPET News
+    ${page_title}
   </title>
   <content>
     <![CDATA[
