@@ -4,11 +4,11 @@
 # the Sitemap must exists when script is called.
 #
 # The script assumes to be called from the repository root.
+#
+# The BASE_URL has to be set in the environment when calling this script.
 
 set -u
 set -e
-
-BASE_URL=https://yapet.guengel.ch/
 
 # W3C Date/Time format in UTC.
 lastmod=`date -u '+%Y-%m-%dT%H:%M:%SZ'`
