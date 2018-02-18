@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# Create fragments from YAPET htmlized man pages using xsltproc.
+# Create fragments from docbook xhtml man pages using xsltproc.
 #
 # The script assumes its current working directory is the repository
 # root.
